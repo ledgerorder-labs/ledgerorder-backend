@@ -1,0 +1,159 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "LedgerOrder API",
+    "version": "0.2.0"
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:4321"
+    }
+  ],
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Local application status",
+        "responses": {
+          "200": {
+            "description": "Health"
+          }
+        }
+      }
+    },
+    "/api/sample": {
+      "get": {
+        "summary": "Synthetic engine sample",
+        "responses": {
+          "200": {
+            "description": "Input"
+          }
+        }
+      }
+    },
+    "/api/audits": {
+      "get": {
+        "summary": "Recent audit history",
+        "responses": {
+          "200": {
+            "description": "At most 100 summaries"
+          }
+        }
+      },
+      "post": {
+        "summary": "Run and persist a normalized audit",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Persisted audit"
+          },
+          "422": {
+            "description": "Invalid normalized input"
+          }
+        }
+      }
+    },
+    "/api/audits/{id}": {
+      "get": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Input and report"
+          },
+          "404": {
+            "description": "Missing"
+          }
+        }
+      }
+    },
+    "/api/contracts/proposals": {
+      "post": {
+        "summary": "Build unsigned registry proposal; never submits a transaction",
+        "responses": {
+          "200": {
+            "description": "Method, ABI args, and local proof"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "auditId",
+                  "publisher"
+                ],
+                "properties": {
+                  "auditId": {
+                    "type": "string"
+                  },
+                  "publisher": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/network": {
+      "get": {
+        "summary": "Read-only operator-configured RPC health",
+        "responses": {
+          "200": {
+            "description": "Provider-reported network status"
+          }
+        }
+      }
+    },
+    "/api/audits/{id}/html": {
+      "get": {
+        "summary": "Render stored audit with shared review package",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Static escaped HTML review",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Audit not found"
+          }
+        }
+      }
+    }
+  }
+}
