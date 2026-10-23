@@ -1,0 +1,69 @@
+{
+  "networkPassphrase": "Test SDF Network ; September 2015",
+  "rpcUrl": "https://soroban-testnet.stellar.org",
+  "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+  "provider": "stellar-testnet-rpc-original",
+  "startLedger": 5346493,
+  "endLedger": 5346493,
+  "coverageDeclared": true,
+  "filter": {
+    "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+    "transactionHash": "9f0217c285677976c9e1b1cf18a5066a2729f70ffad22b53591001ef16437020"
+  },
+  "events": [
+    {
+      "type": "contract",
+      "ledger": 5346493,
+      "ledgerClosedAt": "2026-10-23T11:47:32Z",
+      "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+      "id": "0022963012583325696-0000000000",
+      "operationIndex": 0,
+      "transactionIndex": 8,
+      "txHash": "9f0217c285677976c9e1b1cf18a5066a2729f70ffad22b53591001ef16437020",
+      "topic": [
+        "AAAADwAAAA5hdWRpdF9yZWNvcmRlZAAA"
+      ],
+      "value": "AAAAEQAAAAEAAAADAAAADwAAAAlwdWJsaXNoZXIAAAAAAAASAAAAAAAAAABlvVHHZMzyxURWG0g2yh+m7TqlZ591DNkBRis0LfPj8wAAAA8AAAANcmVwb3J0X2RpZ2VzdAAAAAAAAA0AAAAguK0zwGm1m7T4pc2kLsCL7o7keJsHjxWeoLEpjHiCBL0AAAAPAAAADHNjb3BlX2RpZ2VzdAAAAA0AAAAgiCfNElvTYNbfOfBJNdIQ5CA/VpOi1qym0DZUG0FH0oQ="
+    }
+  ],
+  "rawResponse": {
+    "events": [
+      {
+        "type": "contract",
+        "ledger": 5346493,
+        "ledgerClosedAt": "2026-10-23T11:47:32Z",
+        "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+        "id": "0022963012583325696-0000000000",
+        "operationIndex": 0,
+        "transactionIndex": 8,
+        "txHash": "9f0217c285677976c9e1b1cf18a5066a2729f70ffad22b53591001ef16437020",
+        "topic": [
+          "AAAADwAAAA5hdWRpdF9yZWNvcmRlZAAA"
+        ],
+        "value": "AAAAEQAAAAEAAAADAAAADwAAAAlwdWJsaXNoZXIAAAAAAAASAAAAAAAAAABlvVHHZMzyxURWG0g2yh+m7TqlZ591DNkBRis0LfPj8wAAAA8AAAANcmVwb3J0X2RpZ2VzdAAAAAAAAA0AAAAguK0zwGm1m7T4pc2kLsCL7o7keJsHjxWeoLEpjHiCBL0AAAAPAAAADHNjb3BlX2RpZ2VzdAAAAA0AAAAgiCfNElvTYNbfOfBJNdIQ5CA/VpOi1qym0DZUG0FH0oQ="
+      }
+    ],
+    "cursor": "0022963016878260223-4294967295",
+    "latestLedger": 5346493,
+    "oldestLedger": 5225534,
+    "latestLedgerCloseTime": "1792756052",
+    "oldestLedgerCloseTime": "1792151257"
+  },
+  "request": {
+    "startLedger": 5346493,
+    "endLedger": 5346494,
+    "filters": [
+      {
+        "type": "contract",
+        "contractIds": [
+          "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE"
+        ]
+      }
+    ],
+    "pagination": {
+      "limit": 100
+    }
+  },
+  "positionSource": "RPC transactionIndex; if absent, successful getTransaction.applicationOrder of this exact transaction",
+  "coverageNote": "One bounded, known bootstrap transaction; provider-declared range, not an independent completeness proof"
+}
