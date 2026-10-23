@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "network": "Test SDF Network ; September 2015",
+  "scope": "e28a556d0c745e5ca470a8c98019a2d3af498282f63e3618bbd844e8734488d6",
+  "provider": "injected-missing-event-copy",
+  "startLedger": 5346493,
+  "endLedger": 5346493,
+  "ranges": [
+    {
+      "start": 5346493,
+      "end": 5346493
+    }
+  ],
+  "events": [],
+  "provenance": {
+    "decoder": "@stellar/stellar-sdk@17.3.0",
+    "source": "https://soroban-testnet.stellar.org",
+    "coverage": "producer-declared; not a consensus proof",
+    "alteration": "One event deliberately removed to demonstrate detection. This is not a second provider or a provider outage."
+  }
+}

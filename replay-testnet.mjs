@@ -1,0 +1,16 @@
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {normalizeCapture} from './events.mjs';
+import {compare} from '../ledgerorder-core/index.mjs';
+import {anchorProposal} from '../ledgerorder-contracts/proposal.mjs';
+const load=async name=>JSON.parse(await readFile(new URL(name,import.meta.url),'utf8'));
+const [capture,original,injected,report,evidence]=await Promise.all(['testnet-capture.json','testnet-export-original.json','testnet-export-injected.json','testnet-comparison.json','testnet-evidence.json'].map(load));
+assert.deepEqual(await normalizeCapture(capture),original);
+assert.deepEqual(compare(original,injected),report);
+assert.equal(report.onlyLeft.length,1);
+assert.equal(report.status,'review-required');
+const proposal=anchorProposal(report,{left:original,right:injected},evidence.sourceAccount);
+assert.equal(proposal.args.report_digest,evidence.verificationInput.reportDigest);
+assert.equal(proposal.args.input_digest,evidence.verificationInput.expectedInputDigest);
+assert.equal(proposal.args.scope_digest,evidence.verificationInput.expectedScopeDigest);
+console.log('Saved real event decoded; injected omission detected; all anchored digests reproduced.');

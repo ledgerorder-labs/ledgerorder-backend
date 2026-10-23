@@ -1,0 +1,80 @@
+{
+  "kind": "public-testnet-demo",
+  "network": {
+    "friendbotUrl": "https://friendbot.stellar.org/",
+    "passphrase": "Test SDF Network ; September 2015",
+    "protocolVersion": 29
+  },
+  "sdk": "17.3.0",
+  "sourceAccount": "GBS32UOHMTGPFRKEKYNUQNWKD6TO2OVFM6PXKDGZAFDCWNBN6PR7GQFI",
+  "config": {
+    "rpcUrl": "https://soroban-testnet.stellar.org",
+    "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+    "wasmHash": "08462c30becd675fb7e3f66f9695bdb64e764f0c549db062d85f7f8d25b95582"
+  },
+  "verificationInput": {
+    "publisher": "GBS32UOHMTGPFRKEKYNUQNWKD6TO2OVFM6PXKDGZAFDCWNBN6PR7GQFI",
+    "reportDigest": "9dde5897b001532bcaea8e2eef7237476bde43d03ea11e48ebd6dd680bb17815",
+    "expectedInputDigest": "382148a52a734a1838abc3b2645ecdae2e01a33a3e33b74331b143e901709015",
+    "expectedScopeDigest": "1fb67550621bf261b507b55f780a934cdfd56e1d5706222f1fb29336edb088bc"
+  },
+  "verification": {
+    "verified": true,
+    "project": "ledgerorder",
+    "network": "testnet",
+    "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+    "wasmHash": "08462c30becd675fb7e3f66f9695bdb64e764f0c549db062d85f7f8d25b95582",
+    "record": {
+      "report_digest": "9dde5897b001532bcaea8e2eef7237476bde43d03ea11e48ebd6dd680bb17815",
+      "input_digest": "382148a52a734a1838abc3b2645ecdae2e01a33a3e33b74331b143e901709015",
+      "scope_digest": "1fb67550621bf261b507b55f780a934cdfd56e1d5706222f1fb29336edb088bc",
+      "recorded_ledger": 5346494
+    },
+    "lastModifiedLedger": 5346494,
+    "liveUntilLedger": 5467453,
+    "checkedAt": "2026-10-23T11:47:40.433Z",
+    "sdk": "17.3.0",
+    "trust": "TLS RPC-reported ledger entry; not an independently verified consensus proof"
+  },
+  "deployment": {
+    "hash": "585ae8dd23a2836ad0c78d97ebfff12bc456e3513e38791b91c750a055fac413",
+    "ledger": 5346472
+  },
+  "bootstrap": {
+    "reportDigest": "b8ad33c069b59bb4f8a5cda42ec08bee8ee4789b078f159ea0b1298c788204bd",
+    "inputDigest": "21c2e087724c03e3e458dcf0db7433d57706621d5f008c8bd4c2a9ff8ed79487",
+    "scopeDigest": "8827cd125bd360d6df39f04935d210e4203f5693a2d6aca6d036541b4147d284",
+    "write": {
+      "hash": "9f0217c285677976c9e1b1cf18a5066a2729f70ffad22b53591001ef16437020",
+      "ledger": 5346493,
+      "applicationOrder": 8
+    }
+  },
+  "write": {
+    "hash": "20dada732ec141502adde4f68d868bf78b49ff17fd4f693272a37edbdaa1054a",
+    "ledger": 5346494,
+    "applicationOrder": 7
+  },
+  "notice": "The original export contains real testnet events. The second export is an intentionally modified copy, not an independent provider.",
+  "httpVerification": {
+    "status": 200,
+    "body": {
+      "verified": true,
+      "project": "ledgerorder",
+      "network": "testnet",
+      "contractId": "CBH3RU5PK6IHD2OXSARZT55NXQJYPX375TNOXRJCLKP2BWWJNPIWWLWE",
+      "wasmHash": "08462c30becd675fb7e3f66f9695bdb64e764f0c549db062d85f7f8d25b95582",
+      "record": {
+        "report_digest": "9dde5897b001532bcaea8e2eef7237476bde43d03ea11e48ebd6dd680bb17815",
+        "input_digest": "382148a52a734a1838abc3b2645ecdae2e01a33a3e33b74331b143e901709015",
+        "scope_digest": "1fb67550621bf261b507b55f780a934cdfd56e1d5706222f1fb29336edb088bc",
+        "recorded_ledger": 5346494
+      },
+      "lastModifiedLedger": 5346494,
+      "liveUntilLedger": 5467453,
+      "checkedAt": "2026-10-23T11:48:07.174Z",
+      "sdk": "17.3.0",
+      "trust": "TLS RPC-reported ledger entry; not an independently verified consensus proof"
+    }
+  }
+}
