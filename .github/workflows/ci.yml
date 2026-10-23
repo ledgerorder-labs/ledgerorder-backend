@@ -1,0 +1,31 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: ledgerorder-backend
+      - uses: actions/checkout@v4
+        with:
+          repository: ledgerorder-labs/ledgerorder-core
+          ref: main
+          path: ledgerorder-core
+      - uses: actions/checkout@v4
+        with:
+          repository: ledgerorder-labs/ledgerorder-review
+          ref: main
+          path: ledgerorder-review
+      - uses: actions/checkout@v4
+        with:
+          repository: ledgerorder-labs/ledgerorder-contracts
+          ref: main
+          path: ledgerorder-contracts
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm test
+        working-directory: ledgerorder-backend
